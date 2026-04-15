@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Zealand Travel from Vancouver | Custom Scenic Tours | Jaideep Singh</title>
+  <meta name="description" content="Plan your New Zealand trip from Vancouver with Jaideep Singh (25+ years). Scenic self-drive tours, premium itineraries and expert planning. Call today." />
+  <style>
+    :root {
+      --navy: #0d2238;
+      --lake: #1f5f77;
+      --fern: #3e6b48;
+      --mist: #eef4f3;
+      --stone: #f6f5f0;
+      --gold: #d6aa58;
+      --text: #1c2a33;
+      --muted: #62727c;
+      --border: #dbe3e1;
+      --white: #ffffff;
+      --shadow: 0 16px 40px rgba(13, 34, 56, 0.10);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f7f7f4, #eef4f3);
+      line-height: 1.55;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(100% - 24px, var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: linear-gradient(90deg, var(--navy), var(--lake));
+      color: #fff;
+      font-size: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .topbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-weight: 700;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      background:
+        linear-gradient(180deg, rgba(13,34,56,0.48), rgba(13,34,56,0.76)),
+        url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=70') center/cover no-repeat;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 120px;
+      background: linear-gradient(180deg, rgba(247,247,244,0), rgba(247,247,244,1));
+      pointer-events: none;
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      padding: 48px 0 38px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(214,170,88,0.18);
+      border: 1px solid rgba(255,255,255,0.18);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .03em;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+    }
+
+    .subhead {
+      margin: 0 0 16px;
+      font-size: clamp(18px, 2.2vw, 22px);
+      color: #edf7ff;
+      font-weight: 700;
+    }
+
+    .hero-copy {
+      margin: 0 0 18px;
+      font-size: 18px;
+      color: #f4f8fb;
+      max-width: 760px;
+    }
+
+    .glass {
+      margin: 14px 0;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(10px);
+    }
+
+    .glass strong { color: #ffe6ad; }
+
+    .trust-inline {
+      margin: 12px 0 8px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: .01em;
+      font-size: 15px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 10px;
+      margin: 18px 0 22px;
+    }
+
+    .trust-item {
+      padding: 12px 14px;
+      background: rgba(62,107,72,0.22);
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.14);
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 14px 18px;
+      border-radius: 16px;
+      font-weight: 800;
+      font-size: 16px;
+      transition: transform .18s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #ecc978);
+      color: #182433;
+      box-shadow: 0 14px 28px rgba(214,170,88,0.26);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.94);
+      color: var(--text);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.7);
+      position: relative;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--gold), var(--lake), var(--fern));
+      z-index: 2;
+    }
+
+    .hero-card img {
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      filter: saturate(1.04);
+    }
+
+    .hero-card-body { padding: 20px; }
+    .hero-card h3 { margin: 0 0 8px; font-size: 22px; color: var(--navy); }
+    .hero-card p { margin: 0 0 14px; color: var(--muted); }
+
+    .mini-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .mini-list div {
+      background: linear-gradient(180deg, #fffefb, #f5f8f7);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-weight: 700;
+    }
+
+    section { padding: 28px 0; }
+
+    .section-title {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--navy);
+    }
+
+    .section-intro {
+      margin: 0 0 24px;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #ffffff, #fcfcf8);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .card-pad { padding: 22px; }
+
+    .check-list,
+    .feature-list {
+      display: grid;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+    }
+
+    .check-list li,
+    .feature-list li {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #fbfdfc, #f5f8f7);
+      border: 1px solid var(--border);
+      font-weight: 600;
+    }
+
+    .check-list li::before {
+      content: '✓';
+      color: var(--fern);
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .service-card img {
+      aspect-ratio: 16/10;
+      object-fit: cover;
+    }
+
+    .service-card h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      color: var(--navy);
+    }
+
+    .service-card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #eaf4ef;
+      color: var(--fern);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .review-box {
+      background: linear-gradient(180deg, #ffffff, #fffdf7);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 22px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .review-box blockquote {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.35;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .review-box p { color: var(--muted); }
+
+    .insight {
+      background: linear-gradient(135deg, #f9f4df, #fffaf0);
+      border: 1px solid #eedaa9;
+      color: #6b5411;
+      padding: 14px 16px;
+      border-radius: 16px;
+      font-weight: 700;
+      margin-top: 16px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 16px;
+    }
+
+    .step {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .num {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #e8f1f6, #edf5ef);
+      color: var(--lake);
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    details {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 18px 10px;
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-weight: 800;
+      color: var(--navy);
+      padding-bottom: 10px;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .closing {
+      background: linear-gradient(135deg, var(--navy), var(--lake) 58%, var(--fern));
+      color: #fff;
+      border-radius: 30px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .closing::after {
+      content: '';
+      position: absolute;
+      right: -40px;
+      bottom: -60px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .closing .section-title { color: #fff; }
+    .closing p { color: #e7f0f2; max-width: 760px; }
+
+    .dev-notes {
+      margin-top: 26px;
+      background: #fffdf6;
+      border: 1px solid #efdfb6;
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .dev-notes h3 { margin-top: 0; color: var(--navy); }
+    .dev-notes ul { margin: 10px 0 0; padding-left: 18px; }
+    .dev-notes li { margin-bottom: 10px; }
+
+    footer {
+      padding: 26px 0 110px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .sticky-mobile {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 40;
+      display: none;
+      gap: 10px;
+      padding: 12px;
+      background: rgba(255,255,255,0.94);
+      border-top: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .sticky-mobile .btn { flex: 1; min-height: 52px; font-size: 15px; }
+
+    @media (max-width: 1024px) {
+      .hero .container,
+      .grid-2,
+      .services-grid,
+      .steps { grid-template-columns: 1fr 1fr; }
+      .hero .container { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+
+    @media (max-width: 720px) {
+      .hero .container,
+      .grid-2,
+      .services-grid,
+      .steps,
+      .trust-grid { grid-template-columns: 1fr; }
+      .hero .container { padding: 36px 0 28px; }
+      .cta-row .btn { width: 100%; }
+      .sticky-mobile { display: flex; }
+      .trust-inline { font-size: 14px; line-height: 1.7; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div><strong>Sachkhand Travels Ltd</strong> · Delta, BC · Serving Vancouver & Lower Mainland</div>
+      <div>
+        <a class="pill" href="tel:17789632828">📞 778-963-2828</a>
+        <a class="pill" href="https://wa.me/17789632828?text=Hi%20Jaideep,%20I%E2%80%99m%20planning%20a%20New%20Zealand%20trip%20from%20Vancouver.%20Can%20we%20book%20a%2015-minute%20planning%20call?">💬 WhatsApp Jaideep</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container">
+      <div>
+        <span class="eyebrow">New Zealand Travel Planning from Vancouver</span>
+        <h1>New Zealand is Meant to Be Experienced Slowly.<br />Plan It Right from Vancouver 🇨🇦</h1>
+        <p class="subhead">Scenic Journeys • Self-Drive Tours • Premium Travel</p>
+        <p class="hero-copy">Planning a New Zealand trip from Vancouver, Surrey, Delta, Richmond or nearby areas? Work directly with <strong>Jaideep Singh</strong> to design a smooth, scenic and well-paced journey — not a rushed itinerary that misses what makes New Zealand special.</p>
+
+        <div class="glass"><strong>Planning filter:</strong> Most New Zealand trips from Canada range between <strong>$6,000 – $12,000+ per person</strong> depending on duration, travel style and comfort level.</div>
+
+        <div class="trust-inline">
+          <span style="white-space:nowrap;">25+ Years Experience</span> &nbsp;|&nbsp;
+          <span style="white-space:nowrap;">2000+ Clients Annually</span> &nbsp;|&nbsp;
+          <span style="white-space:nowrap;">Canada & India Operations</span> &nbsp;|&nbsp;
+          <span style="white-space:nowrap;">IATA Certified</span>
+        </div>
+
+        <div class="glass"><strong>Best fit:</strong> Travelers who value comfort, scenery and proper planning — not fast-paced budget trips.</div>
+
+        <div class="trust-grid">
+          <div class="trust-item">Relaxed Scenic Planning</div>
+          <div class="trust-item">Direct Expert Support</div>
+          <div class="trust-item">Premium Travel Positioning</div>
+          <div class="trust-item">Lower Mainland Focus</div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tel:17789632828">📞 Speak with Jaideep – Planning Call</a>
+          <a class="btn btn-secondary" href="https://wa.me/17789632828?text=Hi%20Jaideep,%20I%E2%80%99m%20planning%20New%20Zealand%20travel%20from%20Vancouver.%20Can%20we%20set%20a%20time%20for%20a%2015-minute%20planning%20call?">💬 WhatsApp for a Time Slot</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=70" alt="New Zealand mountain lake scenery for premium scenic travel from Vancouver" loading="eager" />
+        <div class="hero-card-body">
+          <h3>New Zealand Planning, Not Just Booking</h3>
+          <p>A planning-first conversation around North vs South Island, self-drive pacing, scenic sequencing, arrival recovery and how to experience New Zealand without rushing it.</p>
+          <div class="mini-list">
+            <div>Self-Drive vs Guided Strategy</div>
+            <div>Scenic Route Sequencing</div>
+            <div>Slow Travel Comfort Planning</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+   
+    <section>
+      <div class="container grid-2">
+        <div class="card card-pad">
+          <h2 class="section-title">Plan with Jaideep Singh</h2>
+          <p class="section-intro">New Zealand trips designed for flow, not rush.</p>
+          <p>With 25+ years in travel, Jaideep helps build journeys where distances are respected, scenic routes are prioritized and the experience feels calm, premium and worth the long haul from Canada.</p>
+          <ul class="check-list">
+            <li>North Island and South Island planning</li>
+            <li>Self-drive and scenic route specialist</li>
+            <li>Premium and honeymoon travel advisor</li>
+            <li>Comfort-led pacing and location strategy</li>
+            <li>Personally guided itinerary structure</li>
+          </ul>
+        </div>
+
+        <div class="card card-pad">
+          <h2 class="section-title">What We Cover in the Call</h2>
+          <p class="section-intro">A premium New Zealand planning approach for travelers who care about scenery, comfort and smarter travel flow.</p>
+          <ul class="feature-list">
+            <li>North Island vs South Island planning</li>
+            <li>Self-drive vs guided journey structure</li>
+            <li>Scenic route sequencing and stop placement</li>
+            <li>Hotel location vs daily driving distance</li>
+            <li><strong>Slow Travel Planning:</strong> avoiding rushed movement through key regions</li>
+            <li><strong>Premium Comfort Planning:</strong> flights and stays aligned for a smoother experience</li>
+            <li>Jet lag and arrival recovery built into the first days</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">YVR to Auckland – Strategic Airline Comparison</h2>
+        <p class="section-intro">This is where planning beats simple booking. The right carrier for New Zealand depends on whether the traveler values non-stop convenience, points strategy, or a smarter long-haul reset before arriving in Auckland.</p>
+        <div class="card card-pad" style="overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; min-width:760px; font-size:15px;">
+            <thead>
+              <tr>
+                <th style="text-align:left; padding:14px 12px; border-bottom:1px solid var(--border); color:var(--navy);">Feature</th>
+                <th style="text-align:left; padding:14px 12px; border-bottom:1px solid var(--border); color:var(--navy);">Air New Zealand</th>
+                <th style="text-align:left; padding:14px 12px; border-bottom:1px solid var(--border); color:var(--navy);">Air Canada</th>
+                <th style="text-align:left; padding:14px 12px; border-bottom:1px solid var(--border); color:var(--navy);">Fiji Airways</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:12px; border-bottom:1px solid var(--border); font-weight:700;">Route Type</td>
+                <td style="padding:12px; border-bottom:1px solid var(--border);">Direct from YVR</td>
+                <td style="padding:12px; border-bottom:1px solid var(--border);">Direct from YVR when operating seasonally</td>
+                <td style="padding:12px; border-bottom:1px solid var(--border);">1 stop via Nadi (NAN)</td>
+              </tr>
+              <tr>
+                <td style="padding:12px; border-bottom:1px solid var(--border); font-weight:700;">Business Cabin</td>
+                <td style="padding:12px; border-bottom:1px solid var(--border);">Business Premier</td>
+                <td style="padding:12px; border-bottom:1px solid var(--border);">Signature / Executive Pod style long-haul product</td>
+                <td style="padding:12px; border-bottom:1px solid var(--border);">A350 premium cabin experience</td>
+              </tr>
+              <tr>
+                <td style="padding:12px; border-bottom:1px solid var(--border); font-weight:700;">Best For</td>
+                <td style="padding:12px; border-bottom:1px solid var(--border);">Kiwi hospitality and direct comfort</td>
+                <td style="padding:12px; border-bottom:1px solid var(--border);">Aeroplan strategy and Star Alliance loyalty</td>
+                <td style="padding:12px; border-bottom:1px solid var(--border);">Breaking the journey to reduce heavy long-haul fatigue</td>
+              </tr>
+              <tr>
+                <td style="padding:12px; border-bottom:1px solid var(--border); font-weight:700;">The Vibe</td>
+                <td style="padding:12px; border-bottom:1px solid var(--border);">Relaxed, premium, destination-led</td>
+                <td style="padding:12px; border-bottom:1px solid var(--border);">Efficient, practical, corporate-grade</td>
+                <td style="padding:12px; border-bottom:1px solid var(--border);">Boutique island reset before New Zealand</td>
+              </tr>
+              <tr>
+                <td style="padding:12px; font-weight:700;">Architect’s Tip</td>
+                <td style="padding:12px;">Best for time-poor travelers who want direct YVR to AKL convenience.</td>
+                <td style="padding:12px;">Best for clients with strong Aeroplan balances who want familiar Star Alliance strategy.</td>
+                <td style="padding:12px;">The pro move: add 1–2 nights in Fiji to break the trip and arrive in New Zealand feeling clearer.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="insight">This comparison reinforces Sachkhand Travels as a planning-led New Zealand specialist, not just a booking engine. It also speaks directly to YVR and Lower Mainland travelers who care about points, cabin nuance and how they actually feel on arrival.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">New Zealand Travel Services from Vancouver</h2>
+        <p class="section-intro">Built for travelers from Vancouver, Surrey, Delta, Richmond, Burnaby and Langley who want a scenic New Zealand journey done properly.</p>
+
+        <div class="services-grid">
+          <article class="card service-card">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=70" alt="Hobbiton and green rolling hills style experience in New Zealand" loading="lazy" />
+            <div class="card-pad">
+              <h3>Curated Experiences</h3>
+              <p>Hobbiton, geothermal landscapes, cultural moments and premium local experiences layered into the route where they fit naturally.</p>
+              <span class="tag">Experience-Led Planning</span>
+            </div>
+          </article>
+          <article class="card service-card">
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=70" alt="New Zealand scenic road and self drive travel experience" loading="lazy" />
+            <div class="card-pad">
+              <h3>Self-Drive New Zealand Tours</h3>
+              <p>North and South Island journeys designed with sensible pacing, scenic route logic and the right overnight stops.</p>
+              <span class="tag">Flow Over Rush</span>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=70" alt="New Zealand mountains and scenic premium journey" loading="lazy" />
+            <div class="card-pad">
+              <h3>Scenic Experiences</h3>
+              <p>Queenstown, Milford Sound, Rotorua, Lake Tekapo and other iconic regions arranged around experience quality, not checklist speed.</p>
+              <span class="tag">Scenery-First Planning</span>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1200&q=70" alt="Premium long haul cabin comfort for flights to New Zealand" loading="lazy" />
+            <div class="card-pad">
+              <h3>Flights to New Zealand</h3>
+              <p>Comfort-focused routing with premium cabin options and arrival planning that supports the rest of the itinerary.</p>
+              <span class="tag">Jet Lag Aware</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-2">
+        <div class="card card-pad">
+          <h2 class="section-title">Why Most NZ Trips Fail</h2>
+          <ul class="check-list">
+            <li>Too much driving packed into too few days</li>
+            <li>Wrong route planning between regions</li>
+            <li>No rest or scenic recovery days</li>
+            <li>Poor accommodation location strategy</li>
+          </ul>
+        </div>
+
+        <div class="card card-pad">
+          <h2 class="section-title">How We Fix It</h2>
+          <ul class="check-list">
+            <li>Balanced daily drive time</li>
+            <li>Scenic prioritization instead of route chaos</li>
+            <li>Comfortable pacing throughout the trip</li>
+            <li>Expert planning from Vancouver</li>
+          </ul>
+          <div class="insight">“New Zealand is not about how many places you visit — it’s about how you experience them.”</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="review-box">
+          <div class="stars">★★★★★</div>
+          <blockquote>Trusted for high-value travel planning.</blockquote>
+          <p>If a complex international group can be managed smoothly with communication, flexibility and support, your New Zealand journey can be planned with the same confidence and care.</p>
+          <ul class="check-list">
+            <li>Clear communication before and during travel</li>
+            <li>Flexible planning when details evolve</li>
+            <li>Support that reduces long-haul trip stress</li>
+            <li>Premium positioning that filters low-intent leads</li>
+          </ul>
+          <div class="insight">This page is built to attract travelers who want calm, scenic, premium New Zealand planning — not generic booking help.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-intro">Built for travelers with confirmed or near-confirmed New Zealand plans who want better planning before they book.</p>
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <h3>Call or WhatsApp</h3>
+            <p>Reach out directly to start the planning conversation.</p>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <h3>Share Dates & Style</h3>
+            <p>We understand pace, comfort level and route priorities.</p>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <h3>Receive a Tailored Plan</h3>
+            <p>Your route, stops and travel flow are mapped sensibly.</p>
+          </div>
+          <div class="step">
+            <div class="num">4</div>
+            <h3>Confirm with Confidence</h3>
+            <p>You move forward with a journey that feels calm and well-structured.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">New Zealand Travel from Canada — Key Questions</h2>
+        <details open>
+          <summary>Is New Zealand better as a self-drive trip?</summary>
+          <p>For many travelers, yes. Self-drive gives flexibility and lets you experience the landscape at your own pace — if the route is planned well.</p>
+        </details>
+        <details>
+          <summary>How long is ideal for New Zealand?</summary>
+          <p>Most comfortable itineraries fall in the 12–18 day range, depending on how much of the North and South Islands you want to include.</p>
+        </details>
+        <details>
+          <summary>North Island or South Island?</summary>
+          <p>That depends on your travel style. South Island often wins on scenery, while North Island adds culture, geothermal regions and different pacing.</p>
+        </details>
+        <details>
+          <summary>Is New Zealand expensive from Canada?</summary>
+          <p>It is generally a premium long-haul destination, which is why route structure and comfort planning matter.</p>
+        </details>
+        <details>
+          <summary>How do you handle jet lag?</summary>
+          <p>By planning arrival timing, first-night location, recovery pacing and realistic early-day movement.</p>
+        </details>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="closing">
+          <h2 class="section-title">Plan Your New Zealand Journey Properly</h2>
+          <p>Relaxed. Scenic. Well-structured. This page is intentionally built for quality leads who want premium planning and a better New Zealand experience from the start.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="tel:17789632828">📞 Call 778-963-2828</a>
+            <a class="btn btn-secondary" href="https://wa.me/17789632828?text=Hi%20Jaideep,%20I%E2%80%99m%20ready%20to%20plan%20my%20New%20Zealand%20trip.%20Can%20we%20schedule%20a%20planning%20call?">💬 WhatsApp Jaideep</a>
+          </div>
+        </div>
+
+        <div class="dev-notes">
+          <h3>Final 10/10 Upgrade Notes</h3>
+          <ul>
+            <li>Add real WEBP replacements for all scenic images. Use Milford Sound, Lake Tekapo, Queenstown and a true South Island road image to remove any generic North America feel.</li>
+            <li>Add FAQ schema, LocalBusiness schema and Service schema with <strong>Jaideep Singh</strong> explicitly connected to New Zealand travel planning.</li>
+            <li>Keep internal links to Australia LP, Fiji LP, reviews page and a Jaideep authority page near the footer or final CTA.</li>
+            <li>If available, add a real Jaideep portrait in a future section or hero-side card for even higher trust.</li>
+          </ul>
+
+
+          <h3>Developer Instructions</h3>
+          <ul>
+            <li>Replace all current remote images with compressed <strong>.webp</strong> files before publishing. Hero image target: <strong>under 180 KB</strong>. Section images: <strong>50–90 KB</strong>.</li>
+            <li>Keep mobile-first behavior. Most Google Ads traffic will open on phones, so maintain visible CTAs above the fold and keep sticky mobile buttons active.</li>
+            <li>Add <strong>FAQ schema</strong>, <strong>LocalBusiness schema</strong> and <strong>Service schema</strong>. Link <strong>Jaideep Singh</strong> explicitly with New Zealand travel planning expertise.</li>
+            <li>Track conversion events for <strong>phone clicks</strong>, <strong>WhatsApp clicks</strong> and future form submissions. Recommended minimum call conversion threshold: <strong>60 seconds</strong>.</li>
+            <li>Recommended internal links later: Jaideep authority page, Australia LP, Fiji LP, reviews page, About Sachkhand Travels page.</li>
+            <li>Suggested backend/entity keyword clusters: New Zealand travel from Vancouver, New Zealand self-drive planning expert, premium scenic New Zealand itinerary, North South Island travel planner Canada, New Zealand slow travel expert.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+ 
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">What Makes New Zealand Truly Special</h2>
+        <p class="section-intro">New Zealand is not just one type of destination — it is a combination of landscapes, experiences and emotions. A well-planned trip ensures you experience all dimensions, not just the highlights.</p>
+
+        <div class="services-grid">
+          <div class="card card-pad">
+            <h3>🏔 Dramatic Landscapes</h3>
+            <p>From the Southern Alps to glacier valleys, New Zealand offers constantly changing scenery — mountains, lakes, fjords and coastlines within short distances.</p>
+          </div>
+
+          <div class="card card-pad">
+            <h3>🚁 Unique Experiences</h3>
+            <p>Helicopter rides over glaciers, Milford Sound cruises, Hobbiton movie-set experiences, wine regions and geothermal encounters in Rotorua.</p>
+          </div>
+
+          <div class="card card-pad">
+            <h3>🌿 Nature & Calm</h3>
+            <p>Unlike crowded destinations, New Zealand offers space, silence and a deep connection with nature — ideal for couples and premium travelers.</p>
+          </div>
+
+          <div class="card card-pad">
+            <h3>🚗 Scenic Drives</h3>
+            <p>The journey itself is the highlight — coastal drives, alpine roads and lake routes that require proper pacing to enjoy.</p>
+          </div>
+
+          <div class="card card-pad">
+            <h3>🍷 Food & Wine</h3>
+            <p>World-class wineries in Marlborough, Central Otago and Hawke’s Bay combined with fresh local cuisine and regional flavours.</p>
+          </div>
+
+          <div class="card card-pad">
+            <h3>💑 Perfect for Couples</h3>
+            <p>One of the best destinations for honeymoons and romantic getaways with luxury lodges, scenic stays and peaceful surroundings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Curated New Zealand Experiences, Not Just Stops</h2>
+        <p class="section-intro">We do not just list destinations — we connect experiences into a journey that feels meaningful, scenic and well-paced from beginning to end.</p>
+        <div class="grid-2">
+          <div class="card card-pad">
+            <h3>South Island Highlights</h3>
+            <ul class="check-list">
+              <li>Milford Sound cruising through dramatic fjords</li>
+              <li>Queenstown adventure with luxury or scenic stays</li>
+              <li>Lake Tekapo and Mount Cook region planning</li>
+              <li>Franz Josef and Fox Glacier style experiences</li>
+            </ul>
+          </div>
+          <div class="card card-pad">
+            <h3>North Island Highlights</h3>
+            <ul class="check-list">
+              <li>Rotorua geothermal and cultural experiences</li>
+              <li>Hobbiton Movie Set visits</li>
+              <li>Auckland with Waiheke-style wine experiences</li>
+              <li>Maori culture and premium regional add-ons</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card card-pad" style="margin-top:18px;">
+          <h3>Premium Experience Layer</h3>
+          <p>Helicopter glacier landings, scenic flights over mountains and lakes, private-led experiences, wine journeys and comfort-led stays can all be integrated where they fit naturally.</p>
+          <div class="insight">In New Zealand, what you do between destinations matters as much as the destinations themselves.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-2">
+        <div class="card card-pad">
+          <h2 class="section-title">Self-Drive Planning Done Right</h2>
+          <p class="section-intro">New Zealand is one of the world’s best self-drive destinations — but only when the journey is planned around real road days, scenery and energy levels.</p>
+          <ul class="check-list">
+            <li>Realistic driving time, not idealized map timing</li>
+            <li>Best overnight stops for comfort and scenery</li>
+            <li>Scenic-route prioritization where it matters most</li>
+            <li>Car type recommendations based on trip style</li>
+          </ul>
+          <div class="insight">A wrong stop can ruin a day. A right stop makes the journey unforgettable.</div>
+        </div>
+
+        <div class="card card-pad">
+          <h2 class="section-title">Route Planning That Actually Works</h2>
+          <p class="section-intro">Most New Zealand itineraries fail by underestimating distances, overloading driving days and skipping the places that make the route memorable.</p>
+          <ul class="feature-list">
+            <li>Auckland → Rotorua flow for a smoother North Island start</li>
+            <li>Queenstown → Tekapo → Christchurch sequencing</li>
+            <li>Logical North + South Island combinations</li>
+            <li>Less backtracking and better scenic continuity</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-2">
+        <div class="card card-pad">
+          <h2 class="section-title">Who This Is Ideal For</h2>
+          <ul class="check-list">
+            <li>Couples and honeymoon travelers</li>
+            <li>Premium and comfort-focused travelers</li>
+            <li>Nature, scenery and wine lovers</li>
+            <li>Travelers willing to spend for experience quality</li>
+          </ul>
+        </div>
+        <div class="card card-pad">
+          <h2 class="section-title">Who This Is Not Ideal For</h2>
+          <ul class="feature-list">
+            <li>Fast, budget, checklist-style travel</li>
+            <li>Trying to cover everything in 7 days</li>
+            <li>Lowest-price-only planning mindset</li>
+            <li>Trips where route flow and comfort do not matter</li>
+          </ul>
+                  <article class="card service-card">
+            <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1200&q=70" alt="Helicopter glacier and premium alpine experience mood for New Zealand" loading="lazy" />
+            <div class="card-pad">
+              <h3>Premium Experience Layer</h3>
+              <p>Scenic flights, glacier access, luxury lodges and elevated New Zealand moments that transform the journey into something exceptional.</p>
+              <span class="tag">Luxury Scenic Upgrade</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+</main>
+
+  <footer>
+    <div class="container">Sachkhand Travels Ltd · Delta, British Columbia · Serving Vancouver & Lower Mainland</div>
+  </footer>
+
+  <div class="sticky-mobile">
+    <a class="btn btn-primary" href="tel:17789632828">📞 Call Jaideep</a>
+    <a class="btn btn-secondary" href="https://wa.me/17789632828?text=Hi%20Jaideep,%20I%E2%80%99m%20planning%20a%20New%20Zealand%20trip%20from%20Vancouver.%20Can%20we%20book%20a%2015-minute%20planning%20call?">💬 WhatsApp</a>
+  </div>
+</body>
+</html>
